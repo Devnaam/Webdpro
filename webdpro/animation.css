@@ -1,0 +1,130 @@
+#animationfile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: #000;
+    justify-content: center;
+}
+
+.nucleus {
+	width: 150px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: white; /* Set background color to white */
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#conternuc{
+    position: absolute;
+	/* top: 50%;
+	left: 50%; */
+    
+}
+
+.electron-container {
+	position: absolute;
+	top: 50%;
+	/* left: 50%; */
+	/* transform: translate(-50%, -50%); */
+	animation: spin 10s linear infinite;
+	justify-content: left;
+	align-items: left;
+    align-self: first baseline;
+}
+
+.electron {
+	width: 70px;
+	height: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	position: absolute;
+	animation: electron-rotate 10s linear infinite,
+		electron-glow 2s alternate infinite;
+	background-color: white;
+	box-shadow: 0 0 20px rgba(173, 216, 230, 0.5);
+}
+
+.electron i {
+	font-size: 30px;
+	background: linear-gradient(to right, #3b82f6, #1e3a8a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Customize the position of the electrons below */
+.electron:nth-child(1) {
+	top: -120px;
+	left: 120px;
+}
+
+.electron:nth-child(2) {
+	top: 0;
+	left: 160px;
+}
+
+.electron:nth-child(3) {
+	top: 120px;
+	left: 120px;
+}
+
+.electron:nth-child(4) {
+	top: 160px;
+	left: 0;
+}
+
+.electron:nth-child(5) {
+	top: 120px;
+	left: -120px;
+}
+
+.electron:nth-child(6) {
+	top: 0;
+	left: -160px;
+}
+
+.electron:nth-child(7) {
+	top: -120px;
+	left: -120px;
+}
+
+.electron:nth-child(8) {
+	top: -160px;
+	left: 0;
+}
+
+@keyframes electron-rotate {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(-360deg);
+	}
+}
+
+@keyframes electron-glow {
+	0% {
+		box-shadow: 0 0 20px rgba(173, 216, 230, 0.5);
+	}
+	50% {
+		box-shadow: 0 0 10px rgba(173, 216, 230, 0.5);
+	}
+	100% {
+		box-shadow: 0 0 30px rgba(173, 216, 230, 0.5);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
